@@ -6,7 +6,8 @@ import by.gsu.beans.ScienceBook;
 
 public class Runner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Book[] book = new Book[3];
 		AtrBook[] art_book = new AtrBook[3];
 		ScienceBook[] science_book = new ScienceBook[3];
@@ -19,6 +20,12 @@ public class Runner {
 		science_book[0] = new ScienceBook("Science_Book_One","Science_Author_One",150,"Physics","Heavy");
 		science_book[1] = new ScienceBook("Science_Book_Two","Science_Author_Two",200,"Math","Easy");
 		science_book[2] = new ScienceBook("Science_Book_Three","Science_Author_Three",300,"Philosophy","Heavy");
+		for (int i =0;i<3;i++)
+		{
+			System.out.println(book[i].toString());
+			System.out.println(art_book[i].toString());
+			System.out.println(science_book[i].toString());
+		}
 	}
 
 }
