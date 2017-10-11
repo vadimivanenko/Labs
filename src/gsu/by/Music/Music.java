@@ -35,6 +35,11 @@ public class Music {
 	public void setMp3(Boolean mp3) {
 		this.mp3 = mp3;
 	}
+
+	@Override
+	public String toString() {
+		return "Music [name=" + name + ", kol_copy=" + kol_copy + ", mp3=" + mp3 + "]";
+	}
 	
 	
 
