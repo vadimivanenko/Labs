@@ -13,13 +13,20 @@ public class Runner {
 
 	public static void main(String[] args) throws IOException {
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("objects.dat"));
+		Scanner sc = new Scanner(System.in);
 		Employee[] employees1 = new Employee[3];
-		employees1[0] = new Employee("Ivanenko", "programmer", 150);
-		employees1[0].totalBonus(20);
-		employees1[1] = new Employee("Petrov", "driver", 100);
-		employees1[1].totalBonus(30);
-		employees1[2] = new Employee("Sidirov", "menager", 250);
-		employees1[2].totalBonus(10);
+		for (int i=0;i<employees1.length;i++) {
+			System.out.println("get name");
+			String name = sc.nextLine();
+			System.out.println("get vacancy");
+			String vacancy = sc.nextLine();
+			System.out.println("get salary");
+			float salary = sc.nextFloat();
+			System.out.println("get bonus");
+			float bonus = sc.nextFloat();
+			employees1[i] = new Employee(name, vacancy, salary);
+			employees1[i].totalBonus(bonus);
+		}
 		for (Employee employee : employees1) {
 			out.writeObject(employee);
 		}
