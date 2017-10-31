@@ -44,8 +44,8 @@ public class Employee implements Serializable {
 		return baseBonus;
 	}
 	
-	public float totalBonus() {
-		return bonus*baseBonus;
+	public void totalBonus(float bonus) {
+		this.bonus=bonus*baseBonus;
 	}
 
 	@Override
